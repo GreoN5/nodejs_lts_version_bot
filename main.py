@@ -24,5 +24,9 @@ if parsed_btn_version > parsed_current_version:
     else:
         run_shell_output(['nvm', 'install', 'lts'])
         print('Installing node.js lts version using nvm...')
+
+        # apply the lts version
+        run_shell_output(['nvm', 'use', 'lts'])
+        print('Node.js latest lts version is now used.')
 else:
     print('No new lts version available.')
